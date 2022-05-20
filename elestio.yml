@@ -15,3 +15,8 @@ ports:
     isAuth: false
     login: ""
     password: ""
+exposedPorts:
+  - protocol: "HTTP"
+    hostPort: "8080"
+    containerPort: "8080"
+    interface: "172.17.0.1" 
