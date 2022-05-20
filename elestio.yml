@@ -1,0 +1,17 @@
+config:
+  runTime: "Java"
+  version: ""
+  framework: ""
+  buildCommand: "mvn clean install"
+  buildDir: "/target"
+  runCommand: "java -jar target/java.jar"
+ports:
+  - protocol: "HTTPS"
+    targetProtocol: "HTTP"
+    listeningPort: "443"
+    targetPort: "8080"
+    public: true
+    path: "/"
+    isAuth: false
+    login: ""
+    password: ""
