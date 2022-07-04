@@ -5,6 +5,8 @@ config:
   buildCommand: "mvn clean install"
   buildDir: "/target"
   runCommand: "java -jar target/java.jar"
+  icon: "src/main/webapp/resources/images/java.svg"
+  screenshot: "src/main/webapp/resources/images/screenshot.jpg"
 ports:
   - protocol: "HTTPS"
     targetProtocol: "HTTP"
@@ -21,3 +23,6 @@ exposedPorts:
     hostPort: "8080"
     containerPort: "8080"
     interface: "172.17.0.1" 
+webUI:
+  - url: "https://[CI_CD_DOMAIN]"
+    label: "Website"
